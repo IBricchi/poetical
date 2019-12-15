@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html>
+<?php
+$loc=$_POST["loc"];
+$input=strtolower($_POST["key"]);
+$key=str_split($input);
+?>
 <head>
-	<title>Mesostic</title>
+	<title><?php echo $input ?></title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="css.css">
 	<link href="https://fonts.googleapis.com/css?family=Crafty+Girls|Oldenburg" rel="stylesheet">
 </head>
 <body>
-	<?php 
-		$loc=$_POST["loc"];
-		$input=strtolower($_POST["key"]);
-		$key=str_split($input);
+	<?php
 		$text=file("text.txt", FILE_IGNORE_NEW_LINES);
 		$lineres=False;
 
